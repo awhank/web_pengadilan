@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --color-primary: #056e4f;
+    --color-primary-dark: #034834;
+    --color-primary-light: #078c64;
+    --color-secondary: #ff9900;
+    --color-secondary-dark: #d88100;
+    --color-secondary-light: #ffaa33;
+}
+
+/* Accessibility Modes (WCAG Compliant) */
+html.font-lg {
+    font-size: 112.5% !important; /* 18px base */
+}
+html.font-xl {
+    font-size: 125% !important; /* 20px base */
+}
+
+/* High Contrast Mode: Black & Vivid Yellow */
+html.theme-high-contrast {
+    filter: none !important;
+}
+html.theme-high-contrast body {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+}
+html.theme-high-contrast header,
+html.theme-high-contrast nav,
+html.theme-high-contrast footer,
+html.theme-high-contrast section,
+html.theme-high-contrast .card,
+html.theme-high-contrast div {
+    background-color: #0a0a0a !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+}
+html.theme-high-contrast a,
+html.theme-high-contrast button {
+    color: #00ffff !important;
+    border-color: #00ffff !important;
+}
+html.theme-high-contrast .bg-primary,
+html.theme-high-contrast .bg-primary-dark {
+    background-color: #1a1a00 !important;
+    color: #ffff00 !important;
+    border: 1px solid #ffff00 !important;
+}
+html.theme-high-contrast .text-primary,
+html.theme-high-contrast .text-secondary {
+    color: #ffff00 !important;
+}
+
+/* Inverted Mode */
+html.theme-inverted {
+    filter: invert(1) hue-rotate(180deg);
+}
+html.theme-inverted img,
+html.theme-inverted video,
+html.theme-inverted iframe {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Floating Accessibility Toolbar */
+.accessibility-bar {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+}
+
+/* Smooth transitions */
+* {
+    transition: font-size 0.2s ease;
+}
